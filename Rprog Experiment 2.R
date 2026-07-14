@@ -212,3 +212,96 @@ for(i in 1:10){
   }
   print(i)
 }
+# Square Pattern
+n <- 5
+
+for(i in 1:n){
+  for(j in 1:n){
+    cat("* ")
+  }
+  cat("\n")
+}
+
+#Right Triangle
+n <- 5
+
+for(i in 1:n){
+  for(j in 1:i){
+    cat("* ")
+  }
+  cat("\n")
+}
+#Inverted Right Triangle
+n <- 5
+
+for(i in n:1){
+  for(j in 1:i){
+    cat("* ")
+  }
+  cat("\n")
+}
+
+# Pyramid Pattern
+
+n <- 5
+
+for(i in 1:n){
+
+  for(j in 1:(n-i)){
+    cat(" ")
+  }
+
+  for(k in 1:(2*i-1)){
+    cat("*")
+  }
+
+  cat("\n")
+}
+
+# Inverted Pyramid
+n <- 5
+
+for(i in n:1){
+
+  for(j in 1:(n-i)){
+    cat(" ")
+  }
+
+  for(k in 1:(2*i-1)){
+    cat("*")
+  }
+
+  cat("\n")
+}
+
+#Diamond Pattern
+
+n <- 5
+
+# Upper Half
+for(i in 1:n){
+
+  for(j in 1:(n-i)){
+    cat(" ")
+  }
+
+  for(k in 1:(2*i-1)){
+    cat("*")
+  }
+
+  cat("\n")
+}
+
+# Lower Half
+for(i in (n-1):1){
+
+  for(j in 1:(n-i)){
+    cat(" ")
+  }
+
+  for(k in 1:(2*i-1)){
+    cat("*")
+  }
+
+  cat("\n")
+}

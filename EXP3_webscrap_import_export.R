@@ -125,3 +125,30 @@ write_xlsx(data,"students_output.xlsx")
 #Export as Text File
 write.table(data,"students.txt",sep = "\t",row.names = FALSE)
 
+##############NEW WORK
+# Create a data frame
+students <- data.frame(
+  Student_ID = c(101, 102, 103, 104, 105),
+  Student_Name = c("Amit", "Neha", "Rahul", "Priya", "Karan"),
+  Age = c(20, 21, 19, 22, 20),
+  Marks = c(85, 92, 78, 88, 95)
+)
+
+print(students)
+
+#add new column
+students$Result <- ifelse(students$Marks >= 90, "Pass", "Fail") 
+
+print(students)
+
+#Export Data to Excel
+#Install package
+#install.packages("writexl")
+#Load package
+library(writexl)
+#Export
+write_xlsx(students,"students_output.xlsx")
+#install.packages("readxl")
+library(readxl)
+new_data <- read_excel("students_output.xlsx")
+print(new_data)

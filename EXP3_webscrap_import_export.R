@@ -101,3 +101,27 @@ data$Result <- ifelse(data$Marks >= 90, "Pass", "Fail") print(data)
 ##Filter Students with Marks Greater Than 80
 top_students <- subset(data, Marks > 90) print(top_students)
 
+
+
+#Program 2: Import Excel File
+#Install package (only once)
+install.packages("readxl")
+#Load package
+library(readxl)
+#Read Excel file
+data <- read_excel("students.xlsx")
+
+print(data)
+
+#Export Data to Excel
+#Install package
+install.packages("writexl")
+#Load package
+library(writexl)
+#Export
+write_xlsx(data,"students_output.xlsx")
+
+#Other Export Formats
+#Export as Text File
+write.table(data,"students.txt",sep = "\t",row.names = FALSE)
+
